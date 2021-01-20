@@ -1,11 +1,11 @@
-function run() {
-    const input = document.getElementById("input").value;
-    const output = document.getElementById("output");
-    let out = "";
-/**/
-    // write your code here
-    // out = input + 5;
+const input = document.getElementById("input").value;
+const output = document.getElementById("output");
+let arr = [];
 
-/**/
-    output.innerText = out;
+function add() {
+  arr.push(input);
+}
+
+function display() {
+  output.innerText = arr;
 }

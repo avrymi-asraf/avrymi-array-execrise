@@ -4,8 +4,16 @@ function run() {
     let out = "";
 /**/
     // write your code here
-    // out = input + 5;
+    out = isArray(input)
 
 /**/
     output.innerText = out;
 }
+
+
+function isArray(aar){
+    return toString.call(arr)==='[ocject Array]'
+}
+
+const a = [2,3,4,5,5]
+console.log(toString.call(a))
