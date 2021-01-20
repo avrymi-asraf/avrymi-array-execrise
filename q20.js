@@ -1,11 +1,37 @@
-function run() {
-    const input = document.getElementById("input").value;
-    const output = document.getElementById("output");
-    let out = "";
-/**/
-    // write your code here
-    // out = input + 5;
+"use strict";
 
-/**/
-    output.innerText = out;
+console.log('sorce ->  3,3,3,4,6,8,5,47,6')
+removeDup([3,3,3,4,6,8,5,47,6])
+
+
+
+
+ function removeDup(arr){
+    const result = [];
+    arr = sortArray(arr);
+    for(let i =0; i<arr.length;i++){
+        if(arr[i]!==arr[i+1]){
+            result.push(arr[i]);
+        }
+    }
+    console.log(result);
+    
+ }
+
+
+ function sortArray(arr) {
+    let temp = 0;
+  let isNotSort;
+  do {
+    isNotSort = false;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > arr[i + 1]) {
+        temp = arr[i + 1];
+        arr[i + 1] = arr[i];
+        arr[i] = temp;
+        isNotSort = true;
+      }
+    }
+  } while (isNotSort);
+  return arr
 }

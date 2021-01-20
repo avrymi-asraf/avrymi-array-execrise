@@ -1,18 +1,11 @@
-function run() {
-  const input = document.getElementById("input").value;
-  const output = document.getElementById("output");
-  let out = "";
-  /**/
-  // write your code here
-  out = firstOrSlice(input);
-
-  /**/
-  output.innerText = out;
-}
-
+"use strict";
 
 function firstOrSlice(arr, e = 1) {
-  return arr.slice(0, e);
+  let result = arr.slice(0, e);
+  console.log(result)
 }
 
-
+console.log('sorce -> 1,2,3,4,5')
+firstOrSlice([1,2,3,4,5]);
+console.log('sorce -> [1,2,3,4,5],3');
+firstOrSlice([1,2,3,4,5] , 3)

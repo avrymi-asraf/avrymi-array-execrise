@@ -1,19 +1,12 @@
-function run() {
-    const input = document.getElementById("input").value;
-    const output = document.getElementById("output");
-    let out = "";
-/**/
-    // write your code here
-    out = isArray(input)
 
-/**/
-    output.innerText = out;
+
+function isArray(arr){
+    let result = (toString.call(arr)==='[object Array]')
+    console.log(result);
 }
 
-
-function isArray(aar){
-    return toString.call(arr)==='[ocject Array]'
-}
-
-const a = [2,3,4,5,5]
-console.log(toString.call(a))
+const a = [2,3,4,5,5];
+console.log('sorce -> [2,3,4,5,5]');
+isArray([2,3,4,5,5]);
+console.log('sorce -> 2');
+isArray(2);

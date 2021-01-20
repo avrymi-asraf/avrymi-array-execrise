@@ -1,19 +1,13 @@
-function run() {
-  const input = document.getElementById("input").value;
-  const output = document.getElementById("output");
-  let out = "";
-  /**/
-  // write your code here
-  out = dashesBetEven(input)
-  /**/
-  output.innerText = out;
-}
-
+"use strict";
 function dashesBetEven(num) {
   const strNum = String(num);
+  console.log(typeof(strNum))
+  console.log(strNum)
   let nowStrNum = '';
   for (let i = 0; i < strNum.length - 1; i++) {
+    console.log(strNum[i])
     if (Number(strNum[i]) % 2 === 0 && Number(strNum[i + 1]) % 2 === 0) {
+      console.log(strNum[i])
       nowStrNum += strNum[i];
       nowStrNum += "-";
     } else {
@@ -21,8 +15,10 @@ function dashesBetEven(num) {
     }
   }
   nowStrNum += strNum.slice(-1);
-  return nowStrNum;
+   console.log(nowStrNum);
 }
 
+console.log('sorce -> 24356458346')
+dashesBetEven([24356458346])
 
 
